@@ -1,35 +1,56 @@
-.container {
-    display: grid;
-    width: 80%;
-    height: 100vh;
-    margin: 0 auto;
+/* can position items multiple ways
 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr;
+grid-row-start: 1;
+grid-row-end: 2;
+grid-column-start: 1;
+grid-column-end: 2;
+
+will place the item in the top left cell
+
+can shorthand that with 
+
+grid-row: 1 / 2;
+grid-column: 1 / 2;
+
+Can also write
+
+grid-row 1 / 3;
+
+to instead read
+
+grid-row 1 / span 2;
+
+
+can also use grid-area instead of the four values above
+
+grid-area: 1 / 1 / 2 / 2;
+
+where
+
+grid-area: row start / column start/ row end / column end
+
+*/
+
+.defined-grid-fixed-cols { 
+    display: grid; 
+    grid-template-columns: 200px 200px 200px 200px;   
+
+    grid-gap: 1rem;  
+
+    margin: 3rem auto;
+    width: 80%;
+}
+
+.defined-grid-fluid-cols {
+    display: grid;
+    grid-template-columns: 20% auto repeat(2, 1fr);
     grid-gap: 1rem;
 
-    grid-template-areas:
-        "header header header"
-        "main main sidebar"
-        "footer footer footer";
+    margin: 3rem auto;
+    width: 80%;
 }
 
-.item { 
-    border: 2px solid #000000;
-}
-
-.header {
-    grid-area: header;
-}
-
-.main {
-    grid-area: main;
-}
-
-.sidebar {
-    grid-area: sidebar;
-}
-
-.footer {
-    grid-area: footer;
+.item {
+    background-color: rgba($color-tertiary, .9); 
+    border-radius: 3px;  
 }

@@ -15,4 +15,11 @@ html {
 
 body {
     box-sizing: border-box;
+    background: url('../img/paper-background.png') #d1bf98;
+}
+
+.section {
+    margin: 3rem 0;
+    border-bottom: 2px dashed $color-secondary-light;  
+    padding-bottom: 5rem;
 }

@@ -1,0 +1,55 @@
+body {
+    font-family: 'IM Fell English SC', serif;
+    font-weight: 400;
+    font-size: 1.8rem;  
+}
+
+.header {
+    &__heading {
+        color: $color-grey-light-1; 
+        font-size: 4.5rem;         
+        margin-top: 2rem;
+        text-align: center;
+        text-shadow: 1px 1px 1px $color-grey-dark-3;          
+    }
+
+    &__text {
+        color: $color-primary-light;  
+        font-size: 2.4rem;        
+        text-align: center;
+        text-shadow: 1px 1px 1px $color-grey-dark-3;         
+    }
+
+}
+
+.section__heading {
+    color: $color-secondary-light;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 1px 1px 1px $color-secondary-dark;
+}
+
+.section__text {
+    color: $color-primary-dark-2;
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.item {
+    color: $color-grey-light-1;
+    padding: 1rem;
+    font-size: 2rem;     
+    text-align: center;
+    text-shadow: 1px 1px 1px $color-grey-dark-3;    
+}
+
+.footer {
+    &__copy {
+        color: $color-primary-light;
+        font-size: 1.8rem; 
+        text-align: center;  
+        text-shadow: 1px 1px 1px $color-grey-dark-3; 
+    }    
+}
