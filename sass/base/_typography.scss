@@ -10,7 +10,17 @@ body {
         font-size: 4.5rem;         
         margin-top: 2rem;
         text-align: center;
-        text-shadow: 1px 1px 1px $color-grey-dark-3;          
+        text-shadow: 1px 1px 1px $color-grey-dark-3;  
+        
+        
+        @include respond(tablet-portrait) {
+            font-size: 5.5rem;
+        }
+
+        @include respond(phone) {
+            line-height: 5.5rem;
+            margin-bottom: 2rem;
+        }
     }
 
     &__text {
@@ -28,6 +38,11 @@ body {
     margin-bottom: 1rem;
     text-align: center;
     text-shadow: 1px 1px 1px $color-secondary-dark;
+
+    @include respond(phone) {
+        line-height: 3.2rem;
+        margin-bottom: 3rem;
+    }    
 }
 
 .section__text {
