@@ -31,26 +31,97 @@ grid-area: row start / column start/ row end / column end
 
 */
 
-.defined-grid-fixed-cols { 
-    display: grid; 
-    grid-template-columns: 200px 200px 200px 200px;   
-
-    grid-gap: 1rem;  
-
-    margin: 3rem auto;
-    width: 80%;
-}
-
-.defined-grid-fluid-cols {
+// Base styles for all grids and items
+.grid {
+    background-color: rgba($color-secondary, .2);
+    border: 1px dashed rgba($color-secondary, .5);
     display: grid;
-    grid-template-columns: 20% auto repeat(2, 1fr);
-    grid-gap: 1rem;
-
+    grid-gap: 1rem; 
     margin: 3rem auto;
     width: 80%;
+
+    &__item {
+        background-color: rgba($color-tertiary, .9); 
+        border-radius: 3px;  
+    }
 }
 
-.item {
-    background-color: rgba($color-tertiary, .9); 
-    border-radius: 3px;  
+// Fixed column grid 
+.grid-fixed-cols {    
+    grid-template-columns: 200px 200px 200px 200px;   
 }
+
+// Fluid column grid
+.grid-fluid-cols {
+    grid-template-columns: 20% auto repeat(2, 1fr);
+}
+
+// Grid with grid areas positioning
+.grid-areas {
+    grid: 100px 1fr 100px / 40% auto 1fr 2fr;
+
+    &__item-1 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+    }
+
+    &__item-2 {
+        grid-row: 1 / 2;
+        grid-column: 4 / 5;
+    }
+
+    &__item-3 {
+        grid-row: 2 / 4;
+        grid-column: 1 / 2;
+    }
+
+    &__item-4 {
+        grid-row: 2 / 3;
+        grid-column: 2 / 5;
+    }
+
+    &__item-5 {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+    }
+
+    &__item-6 {
+        grid-row: 3 / 4;
+        grid-column: 3 / 5;
+    }
+}
+
+// Named areas grid
+.grid-named-areas {
+    grid-template-areas: 
+        "header header header"
+        "main main sidebar"
+        "sub-content-1 sub-content-2 sidebar"
+        "footer footer footer";
+
+    &__item-1 {
+        grid-area: header;
+    }
+
+    &__item-2 {
+        grid-area: main;
+    }
+
+    &__item-3 {
+        grid-area: sidebar;
+    }
+
+    &__item-4 {
+        grid-area: sub-content-1;
+    }
+
+    &__item-5 {
+        grid-area: sub-content-2;
+    }
+
+    &__item-6 {
+        grid-area: footer;
+    }
+}
+
+

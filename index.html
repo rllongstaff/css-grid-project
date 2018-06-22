@@ -13,41 +13,123 @@
             <p class="header__text">A playground for CSS Grids</p>
         </header>
 
-
         <section class="section">
             <h2 class="section__heading">Grid with fixed width columns</h2>
-            <p class="section__text">A simple grid with fixed column widths. <br><strong>grid-template-columns: 200px 200px 200px 200px;</strong></p>
-            <div class="defined-grid-fixed-cols">
-                <div class="item">Item 1</div>
-                <div class="item">Item 2</div>
-                <div class="item">Item 3</div>
-                <div class="item">Item 4</div>
-                <div class="item">Item 5</div>
-                <div class="item">Item 6</div>
-                <div class="item">Item 7</div>
-                <div class="item">Item 8</div>
-                <div class="item">Item 9</div>                                                            
+            <p class="section__text">A simple grid with fixed column widths.</p>
+            <div class="grid grid-fixed-cols">
+                <div class="grid__item">Item 1
+                    <span class="grid-item-span">200px</span>
+                </div>
+                <div class="grid__item">Item 2
+                    <span class="grid-item-span">200px</span>
+                </div>
+                <div class="grid__item">Item 3
+                    <span class="grid-item-span">200px</span>
+                </div>
+                <div class="grid__item">Item 4
+                    <span class="grid-item-span">200px</span>
+                </div>
+                <div class="grid__item">Item 5
+                    <span class="grid-item-span">200px</span>
+                </div>
+                <div class="grid__item">Item 6
+                    <span class="grid-item-span">200px</span>
+                </div>
+                <div class="grid__item">Item 7
+                    <span class="grid-item-span">200px</span>
+                </div>
+                <div class="grid__item">Item 8
+                    <span class="grid-item-span">200px</span>
+                </div>
+                <div class="grid__item">Item 9
+                    <span class="grid-item-span">200px</span>
+                </div>                                                            
             </div>
         </section>
 
-
         <section class="section">
             <h2 class="section__heading">Grid with fluid width columns</h2>
-            <p class="section__text">A simple grid with fluid column widths. <br><strong>grid-template-columns: 20% auto repeat(2, 1fr)</strong></p>
-            <div class="defined-grid-fluid-cols">
-                <div class="item">Item 1</div>
-                <div class="item">Item 2</div>
-                <div class="item">Item 3</div>
-                <div class="item">Item 4</div>
-                <div class="item">Item 5</div>
-                <div class="item">Item 6</div>
-                <div class="item">Item 7</div>
-                <div class="item">Item 8</div>
-                <div class="item">Item 9</div>                                                            
+            <p class="section__text">A simple grid with fluid column widths.</p>
+            <div class="grid grid-fluid-cols">
+                <div class="grid__item">Item 1
+                    <span class="grid-item-span">20%</span>
+                </div>
+                <div class="grid__item">Item 2
+                    <span class="grid-item-span">Auto</span>
+                </div>
+                <div class="grid__item">Item 3
+                    <span class="grid-item-span">1fr</span>
+                </div>
+                <div class="grid__item">Item 4
+                    <span class="grid-item-span">1fr</span>
+                </div>
+                <div class="grid__item">Item 5
+                    <span class="grid-item-span">20%</span>
+                </div>
+                <div class="grid__item">Item 6
+                    <span class="grid-item-span">auto</span>
+                </div>
+                <div class="grid__item">Item 7
+                    <span class="grid-item-span">1fr</span>
+                </div>
+                <div class="grid__item">Item 8
+                    <span class="grid-item-span">1fr</span>
+                </div>
+                <div class="grid__item">Item 9
+                    <span class="grid-item-span">20%</span>
+                </div>                                                            
             </div>
-        </section>        
+        </section>    
 
-
+        <section class="section">
+            <h2 class="section__heading">Grid line positioned items</h2>
+            <p class="section__text">A simple grid with items positioned using grid lines.</p>
+            <div class="grid grid-areas">
+                <div class="grid__item grid-areas__item-1">Item 1
+                    <span class="grid-item-span">Rows 1 / 2<br> Cols 1 / 4</span>
+                </div>
+                <div class="grid__item grid-areas__item-2">Item 2
+                    <span class="grid-item-span">Rows 1 / 2<br> Cols 4 / 5</span>
+                </div>
+                <div class="grid__item grid-areas__item-3">Item 3
+                    <span class="grid-item-span">Rows 2 / 4<br> Cols 1 / 2</span>
+                </div>
+                <div class="grid__item grid-areas__item-4">Item 4
+                    <span class="grid-item-span">Rows 2 / 3<br> Cols 2 / 5</span>
+                </div>
+                <div class="grid__item grid-areas__item-5">Item 5
+                    <span class="grid-item-span">Rows 3 / 4<br> Cols 2 / 3</span>
+                </div>
+                <div class="grid__item grid-areas__item-6">Item 6
+                    <span class="grid-item-span">Rows 3 / 4<br> Cols 3 / 5</span>
+                </div>   
+            </div>
+        </section>          
+        
+        <section class="section">
+            <h2 class="section__heading">Grid named area positioned items</h2>
+            <p class="section__text">A simple grid with named areas for positioning</p>
+            <div class="grid grid-named-areas">
+                <div class="grid__item grid-named-areas__item-1">Item 1 
+                    <span class="grid-item-span">Header</span>
+                </div>
+                <div class="grid__item grid-named-areas__item-2">Item 2 
+                    <span class="grid-item-span">Main</span>
+                </div>
+                <div class="grid__item grid-named-areas__item-3">Item 3 
+                    <span class="grid-item-span">Sidebar</span>
+                </div>
+                <div class="grid__item grid-named-areas__item-4">Item 4 
+                    <span class="grid-item-span">Sub Content 1</span>
+                </div>
+                <div class="grid__item grid-named-areas__item-5">Item 5 
+                    <span class="grid-item-span">Sub Content 2</span>
+                </div>
+                <div class="grid__item grid-named-areas__item-6">Item 6
+                    <span class="grid-item-span">Footer</span>
+                </div>                                                          
+            </div>
+        </section>          
 
         <footer class="footer">
             <p class="footer__copy">&copy;2018 Russell Longstaff</p>

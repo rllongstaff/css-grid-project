@@ -1,3 +1,17 @@
+/* 
+0 - 600px Phone
+600px - 900px Tablet Portrait Mode
+900px - 1200px Tablet Landscape Mode
+1200px - 1800px Normal Styles Apply
+1800px + Big Screen Desktop
+$breakpoint argument choices:
+-phone
+-tablet-portrait
+-tablet-landscape
+-big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
 *,
 *::after,
 *::before {
@@ -48,12 +62,18 @@ body {
   font-family: 'Raleway', sans-serif;
   text-align: center; }
 
-.item {
+.grid__item {
   color: #f7f7f7;
   padding: 1rem;
   font-size: 2rem;
   text-align: center;
   text-shadow: 1px 1px 1px #333; }
+
+.grid-item-span {
+  color: #42676C;
+  display: block;
+  font-size: 2rem;
+  text-shadow: none; }
 
 .footer__copy {
   color: #F7EACF;
@@ -101,20 +121,55 @@ where
 grid-area: row start / column start/ row end / column end
 
 */
-.defined-grid-fixed-cols {
+.grid {
+  background-color: rgba(118, 109, 143, 0.2);
+  border: 1px dashed rgba(118, 109, 143, 0.5);
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
   grid-gap: 1rem;
   margin: 3rem auto;
   width: 80%; }
+  .grid__item {
+    background-color: rgba(94, 124, 128, 0.9);
+    border-radius: 3px; }
 
-.defined-grid-fluid-cols {
-  display: grid;
-  grid-template-columns: 20% auto repeat(2, 1fr);
-  grid-gap: 1rem;
-  margin: 3rem auto;
-  width: 80%; }
+.grid-fixed-cols {
+  grid-template-columns: 200px 200px 200px 200px; }
 
-.item {
-  background-color: rgba(94, 124, 128, 0.9);
-  border-radius: 3px; }
+.grid-fluid-cols {
+  grid-template-columns: 20% auto repeat(2, 1fr); }
+
+.grid-areas {
+  grid: 100px 1fr 100px / 40% auto 1fr 2fr; }
+  .grid-areas__item-1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4; }
+  .grid-areas__item-2 {
+    grid-row: 1 / 2;
+    grid-column: 4 / 5; }
+  .grid-areas__item-3 {
+    grid-row: 2 / 4;
+    grid-column: 1 / 2; }
+  .grid-areas__item-4 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 5; }
+  .grid-areas__item-5 {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3; }
+  .grid-areas__item-6 {
+    grid-row: 3 / 4;
+    grid-column: 3 / 5; }
+
+.grid-named-areas {
+  grid-template-areas: "header header header" "main main sidebar" "sub-content-1 sub-content-2 sidebar" "footer footer footer"; }
+  .grid-named-areas__item-1 {
+    grid-area: header; }
+  .grid-named-areas__item-2 {
+    grid-area: main; }
+  .grid-named-areas__item-3 {
+    grid-area: sidebar; }
+  .grid-named-areas__item-4 {
+    grid-area: sub-content-1; }
+  .grid-named-areas__item-5 {
+    grid-area: sub-content-2; }
+  .grid-named-areas__item-6 {
+    grid-area: footer; }
